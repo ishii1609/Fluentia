@@ -1,12 +1,12 @@
-const Conversation = require("../models/Conversation");
-const { getAIResponse } = require("../utils/aiService");
+const Conversation = require("../models/convo.model");
+const { getAIResponse } = require("../utils/aiservice");
 
 // POST /api/conversation/chat
 // body: { conversationId (optional), message: "user's text" }
 const chatWithAI = async (req, res) => {
   try {
     const { conversationId, message } = req.body;
-    const userId = req.user.id; // authMiddleware se milega
+    const userId = req.user._id; // authMiddleware se milega
 
     if (!message) {
       return res.status(400).json({ error: "Message is required" });
