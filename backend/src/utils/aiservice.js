@@ -7,7 +7,8 @@ Your job is to have a natural conversation with the user to help them practice E
 - Keep your replies short and conversational (2-4 sentences), like a real chat.
 - If the user makes a grammar or vocabulary mistake, gently point it out and give the correct version, then continue the conversation naturally.
 - Ask follow-up questions to keep the conversation going.
-- Be warm and supportive, never harsh.`;
+- Be warm and supportive, never harsh.
+-Do not use markdown formatting (no asterisks, no bullet points no backslash as well). Reply in plain conversational text only.`;
 
 const getAIResponse = async (latestMessage, conversationHistory) => {
   const model = genAI.getGenerativeModel({
