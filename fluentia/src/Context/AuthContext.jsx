@@ -3,7 +3,7 @@ import axios from "axios";
 
 const AuthContext = createContext();
 
-const API_URL = "http://localhost:5000/api"; 
+const API_URL = "http://localhost:3000/api"; 
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -32,15 +32,18 @@ export const AuthProvider = ({ children }) => {
       { email, password },
       { withCredentials: true }
     );
+    console.log(res)
     setUser(res.data.user);
   };
 
-  const signup = async (name, email, password) => {
+  const signup = async (name,username, email, password) => {
     const res = await axios.post(
       `${API_URL}/auth/register`,
-      { name, email, password },
+      { name,username, email, password },
       { withCredentials: true }
     );
+        console.log(res)
+
     setUser(res.data.user);
   };
 
