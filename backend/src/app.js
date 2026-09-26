@@ -2,6 +2,7 @@
  const authroutes=require('./routes/auth.Routes')
  const convoroutes=require('./routes/convo.routes')
  const reportroutes=require('./routes/reports.routes')
+ const wordroutes=require('./routes/word.route')
  const cookieParser =require ('cookie-parser')
  const cors=require('cors')
 const app=express()
@@ -16,4 +17,6 @@ app.use(express.json());
 app.use('/api/auth',authroutes)
 app.use('/api/convo',convoroutes)
 app.use('/api/report',reportroutes)
+app.use('/api/word',wordroutes)
+
 module.exports=app

@@ -18,7 +18,7 @@ Here is the transcript (only analyze the "user" messages, ignore "ai" messages):
 `;
 
 const analyzeConversation = async (messages) => {
-  const model = genAI.getGenerativeModel({ model: "gemini-3.6-flash" });
+  const model = genAI.getGenerativeModel({ model: "gemini-3.5-flash-lite" });
 
   // sirf user ke messages nikalo
   const userMessages = messages
@@ -37,9 +37,9 @@ const analyzeConversation = async (messages) => {
   try {
     const parsed = JSON.parse(cleanText);
     return parsed;
-  } catch (err) {
-    console.error("Failed to parse Gemini analysis response:", cleanText);
-    throw new Error("Analysis parsing failed");
+   } catch (err) {
+     console.error("Failed to parse Gemini analysis response:", cleanText);
+     throw new Error("Analysis parsing failed");
   }
 };
 

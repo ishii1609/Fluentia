@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
 import AIConversation from "./pages/AIConversation";
 import Reports from "./pages/Reports";
+import ReportsList from './pages/ReportsList'
 import { Route, Routes } from 'react-router-dom'
 
 
@@ -39,10 +40,19 @@ const App = () => {
         }
       />
       <Route
-        path="/reports"
+        path="/reports/:conversationId"
         element={
           <ProtectedRoute>
             <Reports />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/reports"
+        element={
+          <ProtectedRoute>
+            <ReportsList/>
           </ProtectedRoute>
         }
       />

@@ -12,7 +12,7 @@ Your job is to have a natural conversation with the user to help them practice E
 
 const getAIResponse = async (latestMessage, conversationHistory) => {
   const model = genAI.getGenerativeModel({
-    model: "gemini-3.6-flash",
+    model: "gemini-3.5-flash-lite",
     systemInstruction: SYSTEM_PROMPT,
   });
 
