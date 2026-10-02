@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://fluentia-zo3k.onrender.com/api";
 
 const Reports = () => {
   const { conversationId } = useParams();

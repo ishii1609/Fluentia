@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const API_URL = "http://localhost:3000/api";
+const API_URL = "https://fluentia-zo3k.onrender.com/api";
 
 const ReportsList = () => {
   const [reports, setReports] = useState([]);
