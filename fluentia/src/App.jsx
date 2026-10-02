@@ -5,7 +5,7 @@ import Landing from './pages/Landing'
 import Signup from './pages/Signup'
 import Login from './pages/Login'
 import Dashboard from './pages/Dashboard'
-import AIConversation from "./pages/AIConversation";
+import AIConversation from "./pages/AiConversation";
 import Reports from "./pages/Reports";
 import ReportsList from './pages/ReportsList'
 import { Route, Routes } from 'react-router-dom'
