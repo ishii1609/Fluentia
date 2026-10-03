@@ -10,7 +10,7 @@ app.use(cookieParser());
 
 
 app.use(cors({
-  origin: "https://fluentiaa-rho.vercel.app/",
+  origin: "https://fluentiaa-rho.vercel.app",
   credentials: true
 }));
 app.use(express.json());
