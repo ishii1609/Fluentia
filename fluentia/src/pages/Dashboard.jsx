@@ -27,7 +27,7 @@ const Dashboard = () => {
   useEffect(() => {
   const fetchWord = async () => {
     try {
-      const res = await axios.get(`${API_URL}/word/`, { withCredentials: true });
+      const res = await axios.get(`${API_URL}/word`, { withCredentials: true });
       setWordData(res.data);
      } catch (err) {
       console.error("Word fetch error:", err);
