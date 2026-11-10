@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import { useSpeechRecognition } from "../hooks/UseSR";
 
-const API_URL = "https://fluentia-zo3k.onrender.com/api";
+import { API_URL } from "../config";
 
 const AIConversation = () => {
   const [messages, setMessages] = useState([]);

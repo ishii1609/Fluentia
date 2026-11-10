@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../Context/AuthContext";
 import axios from "axios"
-const API_URL = "https://fluentia-zo3k.onrender.com/api";
+import { API_URL } from "../config";
 
 
 const WORD_LIST = [

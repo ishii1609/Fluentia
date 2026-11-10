@@ -3,7 +3,7 @@ import axios from "axios";
 
 const AuthContext = createContext();
 
-const API_URL = "https://fluentia-zo3k.onrender.com/api"; 
+import { API_URL } from "../config";
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
