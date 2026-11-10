@@ -34,7 +34,7 @@ const AIConversation = () => {
 
     try {
       const res = await axios.post(
-        `${API_URL}/convo/`,
+        `${API_URL}/convo`,
         { conversationId, message: text },
         { withCredentials: true }
       );
