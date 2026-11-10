@@ -35,7 +35,7 @@ res.cookie("token", token, {
   httpOnly: true,
   maxAge: 30 * 24 * 60 * 60 * 1000,
   secure: process.env.NODE_ENV === "production",
-  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",//cross site render vercel cookiie block na ho
+  sameSite: "lax", // /api Vercel proxy se aata hai, so cookie first-party hai
 });
 
 res.status(201).json({
@@ -76,7 +76,7 @@ async function loginUser(req,res){
   httpOnly: true,
   maxAge: 30 * 24 * 60 * 60 * 1000,
   secure: process.env.NODE_ENV === "production",
-  sameSite: process.env.NODE_ENV === "production" ? "none" : "lax",
+  sameSite: "lax", // /api Vercel proxy se aata hai, so cookie first-party hai
 });
    res.status(200).json({
     message:'user logged in successfully',
